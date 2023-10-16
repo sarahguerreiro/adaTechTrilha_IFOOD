@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="form.css">
+    <title>Forms</title>
+</head>
+<body>
+    <div class="logpad">
+        <div>
+            <span>Cadastro</span>
+        </div>
+        <div class="logbox">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name">
+
+            <label for="lastname">Sobrenome</label>
+            <input type="text" id="lastname" name="lastname">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <fieldset>
+                <legend>Sexo</legend>
+              
+                <div>
+                  <input type="checkbox" id="fem" name="fem" />
+                  <label for="fem">Feminino</label>
+                </div>
+              
+                <div>
+                  <input type="checkbox" id="masc" name="masc" />
+                  <label for="masc">Masculino</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="indef" name="indef" />
+                  <label for="indef">Outro</label>
+                </div>
+              </fieldset>
+              
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <button>login</button>
+        <div class="social-login">
+            <h3>entrar via</h3>
+            <div class="social-icons">
+                <a href="#" class="social-login__icon fab fa-instagram"></a>
+                <a href="#" class="social-login__icon fab fa-facebook"></a>
+                <a href="#" class="social-login__icon fab fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
