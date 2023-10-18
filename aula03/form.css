@@ -109,15 +109,14 @@
     }
 
 
-    fieldset  {
+fieldset  {
     margin-bottom: 15px;
+    margin-left: -14px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    //align-items: left;
+    //justify-content: left;
 }
-fieldset input {
-    margin: 5px;
-}
-fieldset label {
+
+.margem {
     margin: 5px;
 }
