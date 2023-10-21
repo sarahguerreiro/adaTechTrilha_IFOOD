@@ -1,0 +1,30 @@
+
+#container {
+    background-color: #b02b2b;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;    
+    
+}
+
+#flex-item-1 {
+    background-color: aqua;
+    height: 75px;
+    width: 600px;
+    margin: 0;
+    text-align: left;
+    padding-top: 35px;
+    font-family: Andale Mono, monospace;
+    
+}
+#flex-item-2{
+    background-color: rgb(69, 38, 177);
+    height: 525px;
+    width: 600px;
+    margin: 0;
+    text-align: center;
+    padding-top: 35px;
+    
+}

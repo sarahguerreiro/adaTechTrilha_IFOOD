@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +11,36 @@
     <form action="" method="post" class="action">
       <div class="logpad">
           <div>
-              <span>cadastro</span>
+              <span>Acesse o AdaBucks</span>
           </div>
           <div class="logbox">
               <label for="name">Nome</label>
               <input type="text" id="name" name="name">
+
               <label for="lastname">Sobrenome</label>
               <input type="text" id="lastname" name="lastname">
+
               <label for="email">Email</label>
               <input type="email" id="email" name="email">
+
               <fieldset >
                   <legend>Sexo</legend>
       
                   <div>
-                    <input type="checkbox" id="fem" class="margem" name="fem" />
+                    <input type="radio" id="fem" class="margem" name="fem" />
                     <label for="fem" class="margem">Feminino</label>
                   </div>
       
                   <div>
-                    <input type="checkbox" id="masc" class="margem" name="masc" />
+                    <input type="radio" id="masc" class="margem" name="masc" />
                     <label for="masc" class="margem">Masculino</label>
                   </div>
-                  <div>
-                    <input type="checkbox" id="indef" class="margem" name="indef" />
-                    <label for="indef" class="margem">Outro</label>
-                  </div>
-                </fieldset>
+              </fieldset>
       
-              <label for="password">Password</label>
+              <label for="password">Senha</label>
               <input type="password" name="password">
           </div>
-          <button>login</button>
+          <button>entrar</button>
           <div class="social-login">
               <h3>entrar via</h3>
               <div class="social-icons">
@@ -49,6 +48,11 @@
                   <a href="#" class="social-login__icon fab fa-facebook"></a>
                   <a href="#" class="social-login__icon fab fa-twitter"></a>
               </div>
+          </div>
+          <div id="rec-senha">
+            <a href="/aula03/rec.html">
+              <h3>Esqueceu sua senha?</h3>
+            </a>
           </div>
       </div>
     </form>

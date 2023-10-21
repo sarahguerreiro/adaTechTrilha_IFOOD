@@ -1,11 +1,11 @@
  body {
-    background: url('/aula03/grid.jpg');
+    background-image: url(/aula03/ada-logo.jpg);
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
  }
  .logpad {
-    max-width: 250px;
+    max-width: 350px;
     height: 650px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -24,7 +24,7 @@
 .logpad span:last-child {
     font-family: Andale Mono, monospace;
     color: 1ceeb6;
-    font-size: 44px;
+    font-size: 35px;
 }
 .logpad input {
     border: none;
@@ -37,7 +37,7 @@
     font-family: "Century Gothic";
     font-size: 18px;
     margin-bottom: 20px;
-    trasition: .5s;
+    transition: .5s;
 }
 .logbox {
     color: #ffffff;
@@ -48,7 +48,7 @@
     padding: 7px;
 }
 .logpad button {
-    color: rgb(137, 95, 242);
+    color: #a7f94d;
     background-color: #fff0ff;
     font-size: 21px;
     font-fammily: Lithos Pro;
@@ -58,15 +58,15 @@
     padding: 10px;
     width: 100%;
     margin: 20px 0;
-    trasition: .3s;
+    transition: .3s;
     border-radius: 3px 20px;
 }
 .logpad button:hover {
-    background-color: rgb(73, 48, 194);
+    background-color: rgb(27, 91, 77);
 }
 .logpad input:focus {
     background: none;
-    border-bottom: 2px solid rgb(73, 48, 194);
+    border-bottom: 2px solid rgb(27, 91, 77);
 }
 .social-login {
     position: fixed;
@@ -113,10 +113,35 @@ fieldset  {
     margin-bottom: 15px;
     margin-left: -14px;
     display: flex;
-    //align-items: left;
-    //justify-content: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .margem {
-    margin: 5px;
+    margin: 0;
+    padding: 10px;
 }
+
+#rec-senha {
+    height: 100px;
+    width: 150px;
+    text-align: left;
+    
+}
+
+#rec-senha h3 {
+    font-family: Andale Mono, monospace;
+    
+}
+
+#rec-senha a {
+    display: flex;
+
+    align-items: left;
+    justify-content: left;
+    text-decoration: none;
+    color: azure;
+}
+ #rec-senha a:hover {
+    color: #a7f94d;
+ }
