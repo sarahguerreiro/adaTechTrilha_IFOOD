@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+body {
+
+}
+header {
+    background-image: url(assets/slice-cat-dog-2.png);
+    background-size: 50% ;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #ffa23f;
+    text-align: left;
+}
