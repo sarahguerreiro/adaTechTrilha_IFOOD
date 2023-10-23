@@ -1,31 +1,59 @@
+html, body {
+    height: 100%;
+}
 
-#container {
-    background-color: #fbfbfb;
-    height: 600px;
-    width: 600px;
+body {
+    /*display: -ms-flexbox;
+    display: -webkit-box;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;*/
     display: flex;
-    flex-direction: column;
-    margin: auto;    
-    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f8;
 }
 
-#flex-item-1 {
-    background-color: rgb(103, 246, 196);
-    height: 75px;
-    width: 600px;
-    text-align: center;
-    padding: 35px 0px;
-    font-family: Andale Mono, monospace;
-    border-radius: 10px;
-    
+form {
+    padding: 5px 5px;
+    font-size: 15px;
+    margin: 5px 5px;
 }
-#flex-item-2{
-    background-color: rgb(206, 194, 249);
-    height: 525px;
-    width: 600px;
-    margin: 0;
+
+.form-control {
+    justify-content: center;
+    margin: 10px;
+}
+
+.card-body {
+    border: 20px;
+    border-color: rgb(140, 255, 0);
+    background-color: bisque;
+    padding: 5px;
+}
+
+
+.card-title {
+    font-weight: 300;
     text-align: center;
-    padding-top: 50px;
-    border-radius: 10px;
-    
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 14px;
+    margin: 20px 65px;
+}
+
+.login-form {
+    width: 350px;
+    margin: 20px;
+}
+
+.sign-up {
+    text-align: center;
+    padding: 20px 0 0;
+}
+span {
+    font-size: 14px;
 }
