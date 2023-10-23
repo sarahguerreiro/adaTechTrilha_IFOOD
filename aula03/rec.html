@@ -8,18 +8,27 @@
     <title>Recuperação de Senha</title>
 </head>
 <body>
-   <main id="container">
-    <div id="flex-item-1">
-        <h2>Recuperação de Senha</h2>
-    </div>
-    <section id="flex-item-2">
-        <h1>Para recuperar sua senha, informe seu endereço de email. Enviaremos um link para alteração.</h1>
-        <label for="email">Digite o email cadastrado: </label>
-        <input type="email" name="" id="">
-        <button type="submit">Enviar</button>
+   <main>
+      <div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center"> Redefina sua senha</h3>
 
-    </section>
+            <div class="card-text">
+                <form action="">
+                    <div class="form-group">
+                        <label for="recovery-pass">Digite seu endereço de email e enviaremos um link para redefinir sua senha.</label>
+
+                        <input type="email" class="form-control form-control-sm" placeholder="Digite seu email aqui">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Eviar nova senha por email</button>
+
+                </form>
+            </div>
+        </div>
+      </div>    
    </main>
+   
    <footer>
     <p>eu quero um footer</p>
    </footer>

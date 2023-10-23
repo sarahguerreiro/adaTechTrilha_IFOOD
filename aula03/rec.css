@@ -1,30 +1,31 @@
 
 #container {
-    background-color: #b02b2b;
+    background-color: #fbfbfb;
     height: 600px;
     width: 600px;
     display: flex;
     flex-direction: column;
     margin: auto;    
-    
+    border-radius: 10px;
 }
 
 #flex-item-1 {
-    background-color: aqua;
+    background-color: rgb(103, 246, 196);
     height: 75px;
     width: 600px;
-    margin: 0;
-    text-align: left;
-    padding-top: 35px;
+    text-align: center;
+    padding: 35px 0px;
     font-family: Andale Mono, monospace;
+    border-radius: 10px;
     
 }
 #flex-item-2{
-    background-color: rgb(69, 38, 177);
+    background-color: rgb(206, 194, 249);
     height: 525px;
     width: 600px;
     margin: 0;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 50px;
+    border-radius: 10px;
     
 }
