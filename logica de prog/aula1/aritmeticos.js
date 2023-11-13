@@ -1,1 +1,0 @@
-const number1 = Number(prompt('Numero 1'))
