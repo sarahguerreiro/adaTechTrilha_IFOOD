@@ -12,3 +12,18 @@ const p3 = new Pessoas('Beltrano')
 
 console.log(Pessoas.cadastrados)*/
 
+class MathUtils {
+    constructor(){}
+    static PI() {
+      return 3.14
+    }
+  
+    static sum(n1, n2) {
+      return n1 + n2;
+    }
+  }
+  
+  const m = new MathUtils();
+  
+  console.log(MathUtils.PI());
+  console.log(MathUtils.sum(2, 5));
