@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input name="campoCriaPost" placeholder="Digite o q vc esta pensando"/>
+        <button type="submit">Postar</button>
+    </form>
+    <script>
+        console.log('Ola pessoas')
+        console.log('#construindocruds')
+
+        const $meuForm = document.querySelector('form');
+
+        $meuForm.addEventListener('submit', function criaPostController(infosDoEvento){
+            infosDoEvento.preventDefault();
+            console.log('Estamos criando um post novo')
+            const $campoCriaPost = document.querySelector('input[name="$campoCriaPost"]');
+
+
+            alert($campoCriaPost.value);
+        })
+    </script>
+</body>
+</html>
