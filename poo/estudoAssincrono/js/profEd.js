@@ -1,10 +1,4 @@
-// programa principal
-// POO = Programaçao Orientada a Objeto
-
-// CLASSES = São modelos/moldes de objetos
-// objetos = sao abstrações/representações de 'coisas' q existem no mundo real
-// OBJETO = Instancia ou objeto do tipo | objeto é um tipo de dado
-
+import { Pessoa } from "./Pessoa.js";
 
 // CRIAR NOVO OBJETO A PARTIR DA CLASS: vc tem uma variavel chamada pessoa1 que será um novo objeto do tipo Pessoa ou uma nova instancia de Pessoa(MANEIRA RECOMENDADA): 
 let pessoa1 = new Pessoa('Herbert Biana', 78, 80.5, 1.65);
