@@ -5,7 +5,7 @@
 // objetos = sao abstrações/representações de 'coisas' q existem no mundo real
 // OBJETO = Instancia ou objeto do tipo | objeto é um tipo de dado
 
-class Pessoa 
+export class Pessoa 
 {
     // atributos = variaveis/caracteristicas
     //para indicar q um atributo é protegido, utiliza-se o simbolode # na frente do atributo, porem, seu uso está atrelado a um erro de compatibilidade em alguns navegadores, por isso a comunidade js convencionou o uso do _
