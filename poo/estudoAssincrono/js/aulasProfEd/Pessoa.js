@@ -16,7 +16,8 @@ export class Pessoa
     _altura // float
     _imc // float
     _sexo // string
-    static totalPessoas = 0
+    static totalPessoas = 0 
+    // atributo estático ou da classe, pois nao se trata de um atributo do objeto instanciado, mas da propria class
 
     // metodos = funções/ comportamento 
     constructor(nome, idade, peso, altura) {
@@ -25,16 +26,16 @@ export class Pessoa
         this._peso = peso
         this._altura = altura
         this._imc = this._peso / (this._altura * this._altura)
-        Pessoa.totalPessoas += 1 // contador co m incremento
+        Pessoa.totalPessoas += 1 // contador com incremento no n° total de pessoas em Pessoa
     }
 
     calculaImc() {
         return (this._peso / (this._altura * this._altura)).toFixed(2)
     }
 
-    classificaImc(valorImc) {
+    classificaImc() {
         // pega o
-        valorImc = (this.imc).toFixed(2)
+        let valorImc = (this.imc).toFixed(2)
         let classificacao = ''
 
         if (valorImc < 18.5) {
@@ -55,7 +56,9 @@ export class Pessoa
         return classificacao
     }
 
-    // get = pegar 
+    //metodos acessores: GET e SET
+    // get = pegar  / métodos geters:
+
     get nome() {
         return this._nome
     } 
@@ -75,7 +78,9 @@ export class Pessoa
         return Pessoa.totalPessoas
     }
 
-    // set = configurar, editar, alterar 
+    // set = configurar, editar, alterar.
+    //Dentro do parenteses vai o valor q vc quer setar
+    //metodos seters:
 
     set nome(novoNome) {
         this._nome = novoNome

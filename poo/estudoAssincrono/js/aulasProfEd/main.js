@@ -5,6 +5,7 @@ let pessoa1 = new Pessoa('Herbert Biana', 78, 80.5, 1.65);
 let pessoa2 = new Pessoa('Anderson Silva', 4, 6.5, 30);
 let pessoa3 = new Pessoa('Branca da Silva', 4, 4.6, 20);
 let pessoa4 = new Pessoa('Gilberta da Silva', 4, 4.9, 15);
+let pessoa5 = new Pessoa('Amy Winehouse', 27, 50, 1.59, 15);
 
 console.log(Pessoa.totalPessoas)
 
@@ -24,6 +25,7 @@ console.log(pessoa1.classificaImc())
 console.log(pessoa2.classificaImc())
 console.log(pessoa3.classificaImc())
 console.log(pessoa4.classificaImc())
+console.log(pessoa5.classificaImc())
 /*
 // ATRIBUIR VALORES PARA ATRIBUTOS DE UM OBJETO(MANEIRA NAO RECOMENDADA):
 pessoa1._nome = 'Sarah'
@@ -50,4 +52,4 @@ pessoa3._sexo = 'F'
 
 console.log(pessoa1)
 console.log(pessoa2)
-console.log(pessoa3.calculaImc())
+console.log(pessoa5)
