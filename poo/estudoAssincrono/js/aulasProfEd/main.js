@@ -1,4 +1,4 @@
-import { Pessoa } from "./Pessoa.js";
+import { Pessoa } from "../aulasProfEd/Pessoa.js";
 
 // CRIAR NOVO OBJETO A PARTIR DA CLASS: vc tem uma variavel chamada pessoa1 que será um novo objeto do tipo Pessoa ou uma nova instancia de Pessoa(MANEIRA RECOMENDADA): 
 let pessoa1 = new Pessoa('Herbert Biana', 78, 80.5, 1.65);
