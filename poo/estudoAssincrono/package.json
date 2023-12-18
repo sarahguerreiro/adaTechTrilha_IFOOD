@@ -2,7 +2,7 @@
   "name": "calculadora-imc",
   "version": "1.0.0",
   "description": "calculadora de imc",
-  "main": "./js/main.js",
+  "main": "./js/aulasProfEd/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
