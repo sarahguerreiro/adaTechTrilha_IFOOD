@@ -5,6 +5,10 @@
 // objetos = sao abstrações/representações de 'coisas' q existem no mundo real
 // OBJETO = Instancia ou objeto do tipo | objeto é um tipo de dado
 
+// É IMPORTANTE  que o nome do arquivo tenha o mesmo nome da class, inclusive com a letra inicial maiuscula 
+
+//Com o uso da palavra reservada export vc consegue deixar a class visivel para ser exportada p outro arquivo/ importada por outros aquivo. A export vai na frente da palavra reservada class:
+
 export class Pessoa 
 {
     // atributos = variaveis/caracteristicas

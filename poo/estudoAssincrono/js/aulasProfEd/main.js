@@ -1,4 +1,10 @@
+// IMPORT e EXPORT são recursos do js para linkar classes a arquivos princiais.
+
+// IMPORT = Depois da palavra reservada import é passado, entre chaves o nome da class, depois a palavra reservada from e, entre aspas, o caminho/edereço do arquivo que carrega esta class:
+
 import { Pessoa } from "../aulasProfEd/Pessoa.js";
+
+//é possível passar vários import, basta compiar a linha e setar os parametros
 
 // CRIAR NOVO OBJETO A PARTIR DA CLASS: vc tem uma variavel chamada pessoa1 que será um novo objeto do tipo Pessoa ou uma nova instancia de Pessoa(MANEIRA RECOMENDADA): 
 let pessoa1 = new Pessoa('Herbert Biana', 78, 80.5, 1.65);
