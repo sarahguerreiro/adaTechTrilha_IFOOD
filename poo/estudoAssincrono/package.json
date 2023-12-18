@@ -12,5 +12,5 @@
   },
   "author": "Sarah Guerreiro",
   "license": "ISC",
-  "type": "module"
+  "type": "module" /* adc um type: module pra indicar  q o projeto é do tipo modulo*/
 }
