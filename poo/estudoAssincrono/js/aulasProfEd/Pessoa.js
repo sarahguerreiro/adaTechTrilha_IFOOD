@@ -20,6 +20,7 @@ export class Pessoa
     _altura // float
     _imc // float
     _sexo // string
+    _classificacao
     static totalPessoas = 0 
     // atributo estático ou da classe, pois nao se trata de um atributo do objeto instanciado, mas da propria class
 
@@ -29,17 +30,19 @@ export class Pessoa
         this._idade = idade
         this._peso = peso
         this._altura = altura
-        this._imc = this._peso / (this._altura * this._altura)
+        this._imc = (this._peso / (this._altura * this._altura)).toFixed(2) //set imc
+        this.classificacao = this.classificaImc
         Pessoa.totalPessoas += 1 // contador com incremento no n° total de pessoas em Pessoa
     }
-
+    //get imc
     calculaImc() {
-        return (this._peso / (this._altura * this._altura)).toFixed(2)
+        return this.imc
+        //sempre que a intencao for pegar algum dado, vc verá/usará um return, pq afinal de contas vc quer pegar algo e é o return q vai te dar isso
     }
 
     classificaImc() {
         // pega o
-        let valorImc = (this.imc).toFixed(2)
+        let valorImc = this.imc
         let classificacao = ''
 
         if (valorImc < 18.5) {
