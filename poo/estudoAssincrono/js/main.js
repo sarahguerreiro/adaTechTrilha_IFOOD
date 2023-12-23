@@ -1,5 +1,5 @@
 //import { Pessoa } from "./Pessoa";
-import { PessoaController } from "../js/aulasProfEd/PessoaController.js";
+import { PessoaController } from "./aulasProfEd/controllers/PessoaController.js";
 
 let pessoaController = new PessoaController();
 

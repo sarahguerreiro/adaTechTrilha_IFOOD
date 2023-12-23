@@ -1,4 +1,4 @@
-import { Pessoa } from "../js/aulasProfEd/Pessoa.js";
+import { Pessoa } from "../models/Pessoa.js";
 //import { listaPessoas } from "../aulasProfEd/";
 //import { pessoasView } from "../aulasProfEd/";
 
