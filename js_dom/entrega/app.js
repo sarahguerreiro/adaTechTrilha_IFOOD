@@ -26,29 +26,43 @@ document.addEventListener('DOMContentLoaded', function(){
     titulo.textContent = 'Churrascômetro';
     titulo.classList.add('title-page')
     root.appendChild(titulo)
-    
+
+    const divFormGroup = document.createElement('div');
+    divFormGroup.classList.add('row', 'input-form-group')
+    /*root.appendChild(divFormGroup);*/
+
+    const divCalculator = document.createElement('div');
+    divCalculator.classList.add('calculator')
+    /*root.appendChild(divCalculator);*/
+
     const paragrafo = document.createElement('h1');
     paragrafo.textContent = 'Fique por dentro de todas as novidades. Cadastre seu e-mail e receba promoções especiais!';
     paragrafo.setAttribute('id', 'header-form')
-    root.appendChild(paragrafo)
+    divFormGroup.appendChild(paragrafo)
 
+
+    const form = document.createElement('form');
+    
     const nomeInput = document.createElement('input');
     nomeInput.setAttribute('type', 'text');
     nomeInput.setAttribute('id', 'nome');
     nomeInput.setAttribute('placeholder', 'Nome');
-    root.appendChild(nomeInput);
+    nomeInput.classList.add('input-form');
+    form.appendChild(nomeInput);
 
     const emailInput = document.createElement('input');
     emailInput.setAttribute('type', 'email');
     emailInput.setAttribute('id', 'email');
     emailInput.setAttribute('placeholder', 'E-mail');
-    root.appendChild(emailInput);
+    emailInput.classList.add('input-form');
+    form.appendChild(emailInput);
     
     const cepInput = document.createElement('input');
     cepInput.setAttribute('type', 'text');
     cepInput.setAttribute('id', 'cep');
     cepInput.setAttribute('placeholder', 'CEP');
-    root.appendChild(cepInput);
+    cepInput.classList.add('input-form');
+    form.appendChild(cepInput);
 
 
     const divConsent = document.createElement('div');
@@ -65,20 +79,44 @@ document.addEventListener('DOMContentLoaded', function(){
     consentimentoLabel.setAttribute('id', 'consent-label');
     consentimentoLabel.textContent = 'Aceito receber emails com promoções';
     divConsent.appendChild(consentimentoLabel);
-    root.appendChild(divConsent)
+    form.appendChild(divConsent)
+    divFormGroup.appendChild(form)
+    /*root.appendChild(form)*/
 
 
     const divRow = document.createElement('div');
-    divRow.classList.add('row')
+    divRow.classList.add('row');
 
-    const buttonCadastrar = document.createElement('button');
+    const buttonCadastrar = document.createElement('a');
     buttonCadastrar.textContent = 'Cadastrar';
-    divRow.appendChild(buttonCadastrar)
-    root.appendChild(divRow)
+    buttonCadastrar.classList.add('default-button')
+    buttonCadastrar.href = '#';
+
+    divRow.appendChild(buttonCadastrar);
+    divFormGroup.appendChild(divRow);
 
     buttonCadastrar.addEventListener('click', function() {
         alert('cadastro realizado com sucesso!')
     })
+
+    const nav = document.createElement('div');
+    nav.setAttribute('id', 'nav-container');
+
+    const voltar = document.createElement('button')
+    voltar.setAttribute('id', 'back-nav')
+    voltar.textContent = 'Voltar'
+    voltar.href = '#'
+    nav.appendChild(voltar)
+    
+    const pular = document.createElement('button')
+    pular.setAttribute('id', 'skip-register')
+    pular.textContent = 'Pular'
+    pular.href = '#'
+    nav.appendChild(pular)
+    divFormGroup.appendChild(nav)
+
+    divCalculator.appendChild(divFormGroup)
+    root.appendChild(divCalculator)
 
     loadFormValues();
 
