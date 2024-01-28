@@ -24,8 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const titulo = document.createElement('h1');
     titulo.textContent = 'Churrascômetro';
+    titulo.classList.add('title-page')
     root.appendChild(titulo)
-
+    
+    const paragrafo = document.createElement('h1');
+    paragrafo.textContent = 'Fique por dentro de todas as novidades. Cadastre seu e-mail e receba promoções especiais!';
+    paragrafo.setAttribute('id', 'header-form')
+    root.appendChild(paragrafo)
 
     const nomeInput = document.createElement('input');
     nomeInput.setAttribute('type', 'text');
@@ -45,20 +50,31 @@ document.addEventListener('DOMContentLoaded', function(){
     cepInput.setAttribute('placeholder', 'CEP');
     root.appendChild(cepInput);
 
+
+    const divConsent = document.createElement('div');
+    divConsent.id = 'consent-input';
+
     const consentimentoCheckbox = document.createElement('input');
     consentimentoCheckbox.setAttribute('type', 'checkbox');
     consentimentoCheckbox.setAttribute('id', 'consentimento');
     consentimentoCheckbox.checked = true;
-    root.appendChild(consentimentoCheckbox);
+    divConsent.appendChild(consentimentoCheckbox);
     
     const consentimentoLabel = document.createElement('label');
     consentimentoLabel.setAttribute('for', 'consentimento');
+    consentimentoLabel.setAttribute('id', 'consent-label');
     consentimentoLabel.textContent = 'Aceito receber emails com promoções';
-    root.appendChild(consentimentoLabel);
+    divConsent.appendChild(consentimentoLabel);
+    root.appendChild(divConsent)
+
+
+    const divRow = document.createElement('div');
+    divRow.classList.add('row')
 
     const buttonCadastrar = document.createElement('button');
     buttonCadastrar.textContent = 'Cadastrar';
-    root.appendChild(buttonCadastrar)
+    divRow.appendChild(buttonCadastrar)
+    root.appendChild(divRow)
 
     buttonCadastrar.addEventListener('click', function() {
         alert('cadastro realizado com sucesso!')
