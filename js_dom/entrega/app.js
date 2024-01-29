@@ -19,8 +19,12 @@ function loadFormValues() {
     })
 }
 
+// Primeiro, crio um evento que é acionado depois de o HTML ser totalmente carregado. Então, a função associada à esse evento seleciona o elemento do HTML estático de ID 'root' e o guarda na variavel root:
+
 document.addEventListener('DOMContentLoaded', function(){
     const root = document.getElementById('root');
+
+// a partir desse ponto, seguimos construindo uma estrutura HTML Dinamica dentro do elemento root, criando elementos, atribuindo a eles atributos e anexando-os como filhos do elemento root:
 
     const titulo = document.createElement('h1');
     titulo.textContent = 'Churrascômetro';
@@ -29,11 +33,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const divFormGroup = document.createElement('div');
     divFormGroup.classList.add('row', 'input-form-group')
-    /*root.appendChild(divFormGroup);*/
 
     const divCalculator = document.createElement('div');
     divCalculator.classList.add('calculator')
-    /*root.appendChild(divCalculator);*/
 
     const paragrafo = document.createElement('h1');
     paragrafo.textContent = 'Fique por dentro de todas as novidades. Cadastre seu e-mail e receba promoções especiais!';
