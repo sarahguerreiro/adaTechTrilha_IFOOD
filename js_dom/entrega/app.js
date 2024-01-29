@@ -31,11 +31,12 @@ document.addEventListener('DOMContentLoaded', function(){
     titulo.classList.add('title-page')
     root.appendChild(titulo)
 
-    const divFormGroup = document.createElement('div');
-    divFormGroup.classList.add('row', 'input-form-group')
-
     const divCalculator = document.createElement('div');
     divCalculator.classList.add('calculator')
+    root.insertBefore(divCalculator, titulo.nextSibling);
+
+    const divFormGroup = document.createElement('div');
+    divFormGroup.classList.add('row', 'input-form-group')
 
     const paragrafo = document.createElement('h1');
     paragrafo.textContent = 'Fique por dentro de todas as novidades. Cadastre seu e-mail e receba promoções especiais!';
