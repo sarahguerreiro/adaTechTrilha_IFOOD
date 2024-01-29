@@ -30,18 +30,23 @@ function loadFormValues() {
 document.addEventListener('DOMContentLoaded', function(){
     const root = document.getElementById('root');
 
+    const divContainer = document.createElement('div');
+    divContainer.classList.add('container');
+    root.appendChild(divContainer)
+
 // a partir desse ponto, seguimos construindo uma estrutura HTML Dinamica dentro do elemento root, criando elementos, atribuindo a eles atributos e anexando-os como filhos do elemento root:
 
     const titulo = document.createElement('h1');
     titulo.textContent = 'Churrascômetro';
     titulo.classList.add('title-page')
-    root.appendChild(titulo)
+    divContainer.appendChild(titulo)
 
 // Aqui, eu crio uma div de class='calculator' para encapsular todo o conteúdo do formulário e uso o método isertBefore pra definir esta div como irmã do primeiro h1 da pagina, onde este é passado como argumento do metodo para defini-lo como irmão da div, ou seja, ela vira filha direta de root, assim como o h1 de churrascometro acima:
 
     const divCalculator = document.createElement('div');
     divCalculator.classList.add('calculator')
-    root.insertBefore(divCalculator, titulo.nextSibling);
+    /*root.insertBefore(divCalculator, titulo.nextSibling);*/
+    divContainer.appendChild(divCalculator)
 
 // dentro da div calculator, tbm foi criada uma outra div que vai englobar tudo da pagina, menos o primeiro h1. Essa escolha foi feita pra seguir o template disponibilizado pelo professor e eu poder aproveitar o css feito por ele: 
 
@@ -105,14 +110,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const divRow = document.createElement('div');
     divRow.classList.add('row');
-
-    const buttonCadastrar = document.createElement('a');
+// no template usado pelo prof, o botão é feito com uma tag <a>, mas isso me impedia de 
+    const buttonCadastrar = document.createElement('button');
     buttonCadastrar.textContent = 'Cadastrar';
     buttonCadastrar.classList.add('default-button')
     buttonCadastrar.href = '#';
 
     divRow.appendChild(buttonCadastrar);
     divFormGroup.appendChild(divRow);
+    form.appendChild(buttonCadastrar);
 
 // Criei o evento de clique para o botao:    
 
@@ -139,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function(){
     divFormGroup.appendChild(nav)
 
     divCalculator.appendChild(divFormGroup)
-    root.appendChild(divCalculator)
+    /*root.appendChild(divCalculator)*/
 
 // O método que segue me permite cumprir o requisito "Uma vez que o usuário já tenha preenchido estes campos, não devemos solicitá-los novamente após a página ser recarregada", ele carrega os valores salvos no localStorage de volta para os campos do formulário:
     
