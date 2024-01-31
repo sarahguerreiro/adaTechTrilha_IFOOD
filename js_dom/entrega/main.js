@@ -1,10 +1,13 @@
-function segundaPagina() {
-    const divCalculator = document.querySelector('.calculator');
-//  Aqui eu limpo o conteudo da divCalculator
+export function segundaPagina(root) {
+
+    const divCalculator = document.createElement('div');
+    divCalculator.classList.add("calculator")
+// Aqui eu limpo o conteudo da divCalculator
     divCalculator.innerHTML = "";
     const h3 = document.createElement('h3');
-    h3.textContent = 'Precisa de uma ajudinha com o churrasco?\n\nQuantas pessoas vão participar?';
+    h3.textContent = 'Precisa de uma ajudinha com o churrasco?Quantas pessoas vão participar?';
     divCalculator.appendChild(h3);
+    root.appendChild(divCalculator);
 
     const divCounters = document.createElement('div');
     divCounters.classList.add('counters');
@@ -70,5 +73,5 @@ function segundaPagina() {
     divRow.appendChild(buttonCalcular);
 
     divCalculator.appendChild(divRow);
-
+    
 }
