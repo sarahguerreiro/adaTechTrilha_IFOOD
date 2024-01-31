@@ -137,6 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (nomeValido && cepValido && emailValido) {
       alert("cadastro realizado com sucesso!");
+// Com o método .remove() eu tiro o conteudo do formulário:
+        divFormGroup.remove();
+// E chamo minha função que contém a segunda página pra começar o 2o requisito: 
+        segundaPagina();
     } else {
       alert("Por favor, preencha todos os campos corretamente.");
     }
@@ -180,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  //
+// Adiciona um escutador de evento para o elemento root. O evento change é acionado quando o valor de um elemento é alterado. Quando esse evento é acionado em qualquer elemento filho de root, a função saveFormValues é chamada para atualizar o estado da aplicação ou salvar infos do user:
+
   root.addEventListener("change", saveFormValues);
 });
