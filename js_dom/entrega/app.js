@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const consentimentoCheckbox = document.createElement('input');
     consentimentoCheckbox.setAttribute('type', 'checkbox');
-    consentimentoCheckbox.setAttribute('id', 'consentimento');
+    consentimentoCheckbox.setAttribute('id', 'consent-checkbox');
 // Para que o checkbox seja carregado marcado automaticamente(requisito 1):    
     consentimentoCheckbox.checked = true;
     divConsent.appendChild(consentimentoCheckbox);
@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     divRow.appendChild(buttonCadastrar);
     divFormGroup.appendChild(divRow);
-    form.appendChild(buttonCadastrar);
 
 // Criei o evento de clique para o botao cadastrar q dispara um alert caso o preenchimento dos campos seja valido e outro alert para o caso de preenchimento invalido, usando minhas funções de verificações:
 
