@@ -1,9 +1,16 @@
-// Começo definindo as funções do projeto fora do meu evento principal pra que elas possam ser acessadas em qualquer parte do codigo. Essa primeira função usa uma expressão regular pra validar endereços de email, como pede orequisito 1. Se o preenchimento segue o padrão de um endereço de email, ele será considerado válido:
+// Começo definindo as funções de verificações do projeto fora do meu evento principal pra que elas possam ser acessadas em qualquer parte do codigo. Essa primeira função usa uma expressão regular pra validar endereços de email, como pede orequisito 1. Se o preenchimento segue o padrão de um endereço de email, ele será considerado válido:
+
+function isValidNome(nome) {
+    return /^[A-Za-z\s]+$/.test(nome);
+}
+
+function isValidCep(cep) {
+    return /^\d{5}-?\d{3}$/.test(cep);
+}
 
 function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
-
 // A segunda função salva os valores preenchidos localmente:
 
 function saveFormValues() {
@@ -67,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function(){
     nomeInput.setAttribute('id', 'nome');
     nomeInput.setAttribute('placeholder', 'Nome');
     nomeInput.classList.add('input-form');
+// com essa declaração, consigo tornar o preenchimento do campo obrigatório:
     nomeInput.setAttribute('required', true);
     form.appendChild(nomeInput);
 
@@ -120,10 +128,18 @@ document.addEventListener('DOMContentLoaded', function(){
     divFormGroup.appendChild(divRow);
     form.appendChild(buttonCadastrar);
 
-// Criei o evento de clique para o botao:    
+// Criei o evento de clique para o botao cadastrar q dispara um alert caso o preenchimento dos campos seja valido e outro alert para o caso de preenchimento invalido, usando minhas funções de verificações:
 
     buttonCadastrar.addEventListener('click', function() {
-        alert('cadastro realizado com sucesso!')
+        const nomeValido = isValidNome(nomeInput.value);
+        const cepValido = isValidCep(cepInput.value);
+        const emailValido = isValidEmail(emailInput.value);
+
+        if (nomeValido && cepValido && emailValido) { 
+            alert('cadastro realizado com sucesso!')
+        } else {
+            alert('Por favor, preencha todos os campos corretamente.')
+        }
     })
 
 // e tbm criei uma div pra carregar os botoes de voltar e pular e organizei suas hierarquias dentro do codigo:
