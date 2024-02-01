@@ -1,8 +1,10 @@
-export function segundaPagina(root) {
+function segundaPagina(root) {
 
     const divCalculator = document.createElement('div');
     divCalculator.classList.add("calculator")
+
 // Aqui eu limpo o conteudo da divCalculator
+
     divCalculator.innerHTML = "";
     const h3 = document.createElement('h3');
     h3.textContent = 'Precisa de uma ajudinha com o churrasco?Quantas pessoas vão participar?';
@@ -75,3 +77,5 @@ export function segundaPagina(root) {
     divCalculator.appendChild(divRow);
     
 }
+
+export default segundaPagina;

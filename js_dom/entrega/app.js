@@ -1,4 +1,4 @@
-import { segundaPagina } from "./main.js";
+import  segundaPagina  from "./main.js";
 import { isValidNome, isValidCep, isValidEmail } from "./validacoes.js";
 import "./form.js";
 

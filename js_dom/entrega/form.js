@@ -1,5 +1,5 @@
-import { isValidNome, isValidCep, isValidEmail } from "validacoes.js";
-import { segundaPagina } from "./main.js";
+import { isValidNome, isValidCep, isValidEmail } from "./validacoes.js";
+import segundaPagina from "./main.js";
 
 // Primeiro, crio um evento que é acionado depois de o HTML ser totalmente carregado. Então, a função associada à esse evento seleciona o elemento do HTML estático de ID 'root' e o guarda na variavel root:
 
