@@ -1,0 +1,12 @@
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #4f0080;
+    color: orange;
+    height: 60px;
+    align-items: center;
+    font-size: 32px;
+    font-family: sans-serif;
+    letter-spacing: .5px;
+}
