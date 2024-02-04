@@ -1,14 +1,14 @@
 import './App.css'
 import Header from '../components/header/Header'
-import Manchete from '../components/manchete/Manchete'
+import ListaManchete from '../components/listaManchete/ListaManchete'
+import { noticiasContants } from '../constants/noticiasConstants'
 
 function App() {
   
-
   return (
     <div className='App'>
       <Header />
-      <Manchete/>
+      <ListaManchete />
     </div>
   )
 }

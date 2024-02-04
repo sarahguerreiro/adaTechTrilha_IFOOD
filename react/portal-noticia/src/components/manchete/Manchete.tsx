@@ -1,12 +1,20 @@
-import "./Manchete.css"
-const Manchete = () => {
-    return (<section className="Manchete">
+import "./Manchete.scss"
+
+type MancheteProps = {
+    titulo: string;
+    subtitulo: string;
+    imagem: string;
+}
+
+const Manchete = (props: MancheteProps) => {
+    return (
+    <section className="Manchete">
         <div className="Manchete__descricao">
-            <h1 className="Manchete__titulo">Manchete da Reportagem</h1>
-            <h3 className="Manchete__sub">Subtitulo da reportagem</h3>
+            <h2 className="Manchete__titulo">Estudantes da Ada encontram emprego em 2024</h2>
+            <span className="Manchete__sub">Todos os alunos da turma 1097 foram contratados!</span>
         </div>
         <img src="https://picsum.photos/200/300" alt="blah" className="Manchete__img"/>
     </section>)
 } 
 
-export default Manchete
+export default Manchete;
