@@ -17,3 +17,5 @@ export const noticiasContants: Array<NoticiasType> = [
         imagem: ''
     },
 ]
+
+export default noticiasContants;
