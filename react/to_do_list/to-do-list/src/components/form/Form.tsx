@@ -7,9 +7,10 @@ type FormProps = {
 
 const Form = ({nomeAtividade, acaoSalvar, }) => {
     return (
-        <div>
-
-        </div>
+        <div className='Form'>
+              <input type='text' value={novaAtividade} onChange={(e) => setNovaAtividade}></input>
+              <button onClick={() => novaAtividadeHandler()} disabled={novaAtividade}>salvar</button>
+            </div>
     )
 }
 
