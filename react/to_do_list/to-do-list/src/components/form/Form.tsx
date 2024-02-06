@@ -10,6 +10,8 @@ const Form = ({nomeAtividade, atualizarNomeAtividade,acaoSalvar}:FormProps) => {
         <div className='Form'>
               <input type='text' value={nomeAtividade} onChange={(e) => atualizarNomeAtividade(e.target.value)}/>
 
+              <label />
+
               <button onClick={() => acaoSalvar()} disabled={nomeAtividade.trim().length === 0}>salvar</button>
         </div>
     )

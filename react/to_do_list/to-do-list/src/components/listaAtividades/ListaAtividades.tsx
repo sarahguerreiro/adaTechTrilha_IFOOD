@@ -1,13 +1,15 @@
-
+import { Atividade } from "../atividade/Atividade";
 import "./ListaAtividades.scss";
 
-const ListaAtividades = () => {
-    return (
-        <section className="ListaAtividades">
-            <h1 className="Lista__titulo">
-                Lista de atividades</h1>
+type ListaAtividadesProps = {
+    listaAtividades: string[];
+}
 
-        <section/>
+const ListaAtividades = ({listaAtividades}: ListaAtividadesProps) => {
+    return (
+        <div className="ListaAtividades">
+            {listaAtividades.map(atividade => <Atividade key={atividade} atividade={atividade} />)}
+        </div>
     )
 }
 
