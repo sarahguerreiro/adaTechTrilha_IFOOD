@@ -2,4 +2,4 @@ const Cadastro = () => {
     return <div>Cadastro</div>
 }
 
-export default Cadastro
+export default Cadastro;
