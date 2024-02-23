@@ -10,7 +10,7 @@ const Cadastro = () => {
             nome: e.target[0].value,
             email: e.target[1].value,
             senha: e.target[2].value,
-            dataNascimento: e.target[3].value,
+            dataNasc: e.target[3].value,
             estado: e.target[4].value,
             pais: e.target[5].value,
         }
