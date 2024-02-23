@@ -1,8 +1,17 @@
-import { useState } from "react";
 import { UsuarioType } from "../../types/usuario.type";
 
 const Cadastro = () => {
-    const [usuario, setUsuario] = useState<UsuarioType>();
+    const cadastrarUsuario = (usuario: UsuarioType) =>  {
+        const listaAtual = localStorage.getItem('listaUsuarios');
+        let listaUsuarios = [];
+
+        if (listaAtual) {
+            listaUsuarios = JSON.parse(listaAtual);
+        }
+
+        listaUsuarios.push(usuario);
+        localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
+    }
 
     const submitHandler = (e: any) => {
         e.preventDefault();
@@ -12,9 +21,9 @@ const Cadastro = () => {
             senha: e.target[2].value,
             dataNasc: e.target[3].value,
             estado: e.target[4].value,
-            pais: e.target[5].value,
+            pais: e.target[5].value
         }
-        console.log(novoUsuario)
+        cadastrarUsuario(novoUsuario);
     }
 
     return <div className="Cadastro">
