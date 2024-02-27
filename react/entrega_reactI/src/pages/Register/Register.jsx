@@ -1,4 +1,4 @@
-export const Register = () => {
+const Register = () => {
     return (
         <>Register</>
     )
