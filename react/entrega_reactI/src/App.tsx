@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <div className='App rainbow-box'>
       {
         formAtual === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
       }
