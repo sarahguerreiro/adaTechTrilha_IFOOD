@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 
-export const Login = (props) => {
+interface LoginProps {
+  onFormSwitch: (form: string) => void;
+}
+
+export const Login: React.FC<LoginProps> = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // pra page nao ser recarregada
-    console.log(email);
+    console.log(email, pass);
   };
 
   return (
-/*O uso de <></> é conhecido como fragment syntax no React. Um fragment é uma maneira de agrupar vários elementos filhos sem adicionar nós extras ao DOM.  Assim, você pode usar <></> como um invólucro sem adicionar elementos extras ao DOM. Então, quando você precisa retornar múltiplos elementos adjacentes em um componente React sem criar um elemento extra no DOM, vale a pena envolve-los com <></>.
-Aqui, o <></> está envolvendo o <form>, <label>, <input>, e <button>. Isso permite que todos esses elementos sejam retornados como uma única entidade no componente, sem adicionar um nó extra ao DOM:*/
+
     <div className="auth-form-container">
       <h2>Login</h2>
       <form className="login-form" onSubmit={handleSubmit}>
@@ -23,6 +26,7 @@ Aqui, o <></> está envolvendo o <form>, <label>, <input>, e <button>. Isso perm
           placeholder="youremail@gmail.com"
           id="email"
           name="email"
+          required
         />
 
         <label htmlFor="password">Password</label>
@@ -30,9 +34,10 @@ Aqui, o <></> está envolvendo o <form>, <label>, <input>, e <button>. Isso perm
           value={pass}
           onChange={(e) => setPass(e.target.value)}
           type="password"
-          placeholder="******"
+          placeholder="*********"
           id="password"
           name="password"
+          required
         />
         <button type="submit"> Log In </button>
       </form>
