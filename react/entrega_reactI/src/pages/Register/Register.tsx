@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 export const Register = (props) => {
   const [email, setEmail] = useState("");
