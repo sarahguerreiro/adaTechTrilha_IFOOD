@@ -1,14 +1,18 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
-export const Register = (props) => {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [name, setName] = useState("");
-  const [data, setData] = useState("");
-  const [estado, setEstado] = useState("");
-  const [pais, setPais] = useState("");
+interface RegisterProps {
+  onFormSwitch: (formName: string) => void;
+}
 
-  const handleSubmit = (e) => {
+export const Register: React.FC<RegisterProps>= (props) => {
+  const [email, setEmail] = useState<string>("");
+  const [pass, setPass] = useState<string | number>("");
+  const [name, setName] = useState<string>("");
+  const [data, setData] = useState<Date>();
+  const [estado, setEstado] = useState<string>("");
+  const [pais, setPais] = useState<string>("");
+
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault(); 
     console.log(pais);
   };
