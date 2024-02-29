@@ -8,7 +8,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
   const [email, setEmail] = useState<string>("");
   const [pass, setPass] = useState<string | number>("");
   const [name, setName] = useState<string>("");
-  const [data, setData] = useState<Date>();
+  const [data, setData] = useState<string>("");
   const [estado, setEstado] = useState<string>("");
   const [pais, setPais] = useState<string>("");
 
@@ -24,7 +24,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="name"> Name </label>
         <input
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
           type="text"
           placeholder="Digite seu nome completo"
           id="name"
@@ -34,7 +34,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="email">email</label>
         <input
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
           type="email"
           placeholder="youremail@gmail.com"
           id="email"
@@ -44,7 +44,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="password">Password</label>
         <input
           value={pass}
-          onChange={(e) => setPass(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setPass(e.target.value)}
           type="password"
           placeholder="******"
           id="password"
@@ -55,7 +55,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="date">Data de Nascimento</label>
         <input
           value={data}
-          onChange={(e) => setData(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setData(e.target.value.slice(0,10))}
           type="Date"
           placeholder="DD/MM/AAAA"
           id="data"
@@ -66,7 +66,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="text">Estado</label>
         <input
           value={estado}
-          onChange={(e) => setEstado(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setEstado(e.target.value)}
           type="text"
           placeholder="Digite o Estado que vc nasceu"
           id="estado"
@@ -77,7 +77,7 @@ export const Register: React.FC<RegisterProps>= (props) => {
         <label htmlFor="text">País</label>
         <input
           value={pais}
-          onChange={(e) => setPais(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setPais(e.target.value)}
           type="Enum"
           placeholder="Digite o país que vc nasceu"
           id="pais"
