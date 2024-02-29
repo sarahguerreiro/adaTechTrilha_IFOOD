@@ -52,7 +52,7 @@ export const Register = (props) => {
         <input
           value={data}
           onChange={(e) => setData(e.target.value)}
-          type="data"
+          type="Date"
           placeholder="DD/MM/AAAA"
           id="data"
           name="data"
@@ -74,7 +74,7 @@ export const Register = (props) => {
         <input
           value={pais}
           onChange={(e) => setPais(e.target.value)}
-          type="text"
+          type="Enum"
           placeholder="Digite o país que vc nasceu"
           id="pais"
           name="pais"
